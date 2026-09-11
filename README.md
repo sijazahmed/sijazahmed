@@ -2,7 +2,7 @@
 
 🚀 **Senior AI/ML Architect | LLM Engineer | Cloud & MLOps Specialist**
 
-I’m a Senior AI/ML Architect with **10 years of experience** designing and deploying enterprise-scale AI platforms, machine learning systems, and cloud-native MLOps infrastructure.
+I’m a Senior AI/ML Architect with **8+ years of experience** designing and deploying enterprise-scale AI platforms, machine learning systems, and cloud-native MLOps infrastructure.
 
 I specialize in building **LLM-powered applications**, **real-time ML inference platforms**, **multi-cloud AI architectures**, and **production-grade machine learning systems** across finance, healthcare, insurance, and enterprise SaaS.
 
