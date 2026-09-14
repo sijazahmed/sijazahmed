@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/header.svg" width="100%" alt="Sijaz Ahmed - Senior AI/ML Architect & Full Stack Lead" />
+  <img src="https://raw.githubusercontent.com/sijazahmed/sijazahmed/main/assets/header.svg" width="100%" alt="Sijaz Ahmed - Senior AI/ML Architect & Full Stack Lead" />
 </p>
 
 <p align="center">
@@ -455,7 +455,7 @@ I am always interested in discussing enterprise AI architecture, high-throughput
 - 📍 **Location**: Baltimore, MD, United States
 
 <p align="center">
-  <img src="assets/footer.svg" width="100%" alt="Footer Divider" />
+  <img src="https://raw.githubusercontent.com/sijazahmed/sijazahmed/main/assets/footer.svg" width="100%" alt="Footer Divider" />
 </p>
 
 <p align="center">
