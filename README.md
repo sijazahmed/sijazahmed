@@ -28,7 +28,6 @@
 - [Industry Vertical Case Studies](#-industry-vertical-case-studies)
 - [Professional Certifications & Credentials](#-professional-certifications--credentials)
 - [Academic Background & Technical Publications](#-academic-background--technical-publications)
-- [GitHub Live Telemetry & Analytics](#-github-live-telemetry--analytics)
 - [Connect & Collaborate](#-connect--collaborate)
 
 ---
@@ -445,18 +444,6 @@ sijazahmed/ (Private Enterprise Repositories)
 
 ---
 
-## 📈 GitHub Live Telemetry & Analytics
-
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=sijazahmed&show_icons=true&theme=radical&include_all_commits=true&count_private=true&hide_border=true" width="48%" alt="Sijaz Ahmed GitHub Stats" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=sijazahmed&layout=compact&theme=radical&hide_border=true" width="48%" alt="Sijaz Ahmed Top Languages" />
-</p>
-
-<p align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=sijazahmed&theme=radical&hide_border=true" width="97%" alt="Sijaz Ahmed Streak Stats" />
-</p>
-
----
 
 ## 📬 Connect & Collaborate
 
