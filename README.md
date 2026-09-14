@@ -1,13 +1,13 @@
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=0,2,6,12,24&height=220&section=header&text=Sijaz%20Ahmed&fontSize=68&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=Senior%20AI/ML%20Architect%20%7C%20Full%20Stack%20Lead%20%7C%20Cloud%20%26%20Data%20Platform%20Engineer&descSize=20&descAlignY=58&descAlign=50" width="100%" alt="Sijaz Ahmed Header" />
+  <img src="assets/header.svg" width="100%" alt="Sijaz Ahmed - Senior AI/ML Architect & Full Stack Lead" />
 </p>
 
 <p align="center">
-  <a href="https://linkedin.com/in/ssijaz"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
-  <a href="mailto:Samee.ijaz01@gmail.com"><img src="https://img.shields.io/badge/Email-Samee.ijaz01%40gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" /></a>
-  <a href="https://github.com/sijazahmed"><img src="https://img.shields.io/badge/GitHub-sijazahmed-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" /></a>
-  <img src="https://img.shields.io/badge/Location-Baltimore%2C%20MD-24292e?style=for-the-badge&logo=google-maps&logoColor=white" alt="Location" />
-  <img src="https://img.shields.io/badge/Experience-8%2B%20Years-success?style=for-the-badge" alt="Experience" />
+  <a href="https://linkedin.com/in/ssijaz"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>&nbsp;
+  <a href="mailto:Samee.ijaz01@gmail.com"><img src="https://img.shields.io/badge/Email-Samee.ijaz01%40gmail.com-D14836?style=flat-square&logo=gmail&logoColor=white" alt="Email" /></a>&nbsp;
+  <a href="https://github.com/sijazahmed"><img src="https://img.shields.io/badge/GitHub-sijazahmed-181717?style=flat-square&logo=github&logoColor=white" alt="GitHub" /></a>&nbsp;
+  <img src="https://img.shields.io/badge/Location-Baltimore%2C%20MD-334155?style=flat-square&logo=google-maps&logoColor=white" alt="Location" />&nbsp;
+  <img src="https://img.shields.io/badge/Experience-8%2B%20Years-10B981?style=flat-square" alt="Experience" />
 </p>
 
 <p align="center">
@@ -455,7 +455,7 @@ I am always interested in discussing enterprise AI architecture, high-throughput
 - 📍 **Location**: Baltimore, MD, United States
 
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=slice&color=gradient&customColorList=0,2,6,12,24&height=100&section=footer" width="100%" alt="Footer" />
+  <img src="assets/footer.svg" width="100%" alt="Footer Divider" />
 </p>
 
 <p align="center">

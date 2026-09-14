@@ -1,0 +1,107 @@
+<svg width="100%" height="240" viewBox="0 0 900 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070B14" />
+      <stop offset="40%" stop-color="#0D1322" />
+      <stop offset="100%" stop-color="#111A30" />
+    </linearGradient>
+
+    <!-- Glowing accents -->
+    <radialGradient id="cyanGlow" cx="20%" cy="30%" r="50%">
+      <stop offset="0%" stop-color="#00F0FF" stop-opacity="0.25" />
+      <stop offset="100%" stop-color="#00F0FF" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="violetGlow" cx="80%" cy="25%" r="60%">
+      <stop offset="0%" stop-color="#8A2BE2" stop-opacity="0.28" />
+      <stop offset="100%" stop-color="#8A2BE2" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="indigoGlow" cx="50%" cy="85%" r="50%">
+      <stop offset="0%" stop-color="#4F46E5" stop-opacity="0.20" />
+      <stop offset="100%" stop-color="#4F46E5" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Top Border Gradient -->
+    <linearGradient id="topBorder" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00F0FF" />
+      <stop offset="50%" stop-color="#8A2BE2" />
+      <stop offset="100%" stop-color="#00FF88" />
+    </linearGradient>
+
+    <!-- Text Gradient -->
+    <linearGradient id="textGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="50%" stop-color="#E0E7FF" />
+      <stop offset="100%" stop-color="#00F0FF" />
+    </linearGradient>
+
+    <!-- Pill Gradient -->
+    <linearGradient id="pillGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00F0FF" stop-opacity="0.15" />
+      <stop offset="100%" stop-color="#8A2BE2" stop-opacity="0.15" />
+    </linearGradient>
+
+    <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#FFFFFF" stroke-opacity="0.03" stroke-width="1" />
+      <circle cx="0" cy="0" r="1" fill="#00F0FF" fill-opacity="0.15" />
+    </pattern>
+  </defs>
+
+  <style>
+    .name-title {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      font-weight: 800;
+      font-size: 52px;
+      letter-spacing: 5px;
+      fill: url(#textGradient);
+    }
+    .role-badge {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      font-weight: 600;
+      font-size: 15px;
+      letter-spacing: 2.5px;
+      fill: #00F0FF;
+    }
+    .tech-pill {
+      font-family: 'Fira Code', 'SF Mono', Consolas, Menlo, Monaco, monospace;
+      font-size: 12px;
+      font-weight: 500;
+      fill: #94A3B8;
+    }
+  </style>
+
+  <!-- Base background -->
+  <rect width="100%" height="100%" rx="16" fill="url(#bgGradient)" />
+  <rect width="100%" height="100%" rx="16" fill="url(#grid)" />
+
+  <!-- Ambient Light Orbs -->
+  <circle cx="180" cy="70" r="160" fill="url(#cyanGlow)" />
+  <circle cx="720" cy="60" r="180" fill="url(#violetGlow)" />
+  <circle cx="450" cy="200" r="150" fill="url(#indigoGlow)" />
+
+  <!-- Top illuminated border bar -->
+  <rect x="0" y="0" width="100%" height="3" fill="url(#topBorder)" />
+
+  <!-- Decorative Circuit lines -->
+  <path d="M 40 40 L 120 40 L 140 60" stroke="#00F0FF" stroke-opacity="0.2" stroke-width="1.5" fill="none" />
+  <circle cx="140" cy="60" r="3" fill="#00F0FF" fill-opacity="0.6" />
+
+  <path d="M 860 40 L 780 40 L 760 60" stroke="#8A2BE2" stroke-opacity="0.2" stroke-width="1.5" fill="none" />
+  <circle cx="760" cy="60" r="3" fill="#8A2BE2" fill-opacity="0.6" />
+
+  <!-- Center Content -->
+  <g transform="translate(450, 85)" text-anchor="middle">
+    <!-- Subtitle Tag -->
+    <rect x="-260" y="-45" width="520" height="28" rx="14" fill="url(#pillGrad)" stroke="#00F0FF" stroke-opacity="0.3" stroke-width="1" />
+    <text x="0" y="-27" class="role-badge">SENIOR AI/ML ARCHITECT • FULL STACK LEAD</text>
+
+    <!-- Main Name Title -->
+    <text x="0" y="32" class="name-title">SIJAZ AHMED</text>
+
+    <!-- Secondary Tagline -->
+    <text x="0" y="65" class="tech-pill">ENTERPRISE LLMs &amp; RAG  •  REAL-TIME EVENT STREAMING  •  MULTI-CLOUD (AWS / GCP / AZURE)</text>
+  </g>
+
+  <!-- Bottom Accent Line -->
+  <line x1="150" y1="205" x2="750" y2="205" stroke="#334155" stroke-opacity="0.4" stroke-width="1" stroke-dasharray="6 6" />
+</svg>
