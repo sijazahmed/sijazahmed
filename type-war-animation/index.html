@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Great Type War: Static Citadel vs. Dynamic Swarm | Sijaz Ahmed</title>
+  <meta name="description" content="Cinematic automated battle animation between Static Type Legion and Dynamic Runtime Swarm, synthesized by Senior AI/ML Architect Sijaz Ahmed.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600;700&family=Outfit:wght@400;600;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="cyber-scanlines"></div>
+  <div class="cyber-vignette"></div>
+
+  <!-- Header Section -->
+  <header class="battle-header">
+    <div class="header-left">
+      <div class="badge-status">
+        <span class="pulse-dot"></span>
+        <span>SYSTEM ONLINE // AUTONOMOUS CHOREOGRAPHY</span>
+      </div>
+      <h1 class="main-title">THE GREAT TYPE WAR</h1>
+      <p class="subtitle">COMPILE-TIME IMMUTABILITY <span class="vs-tag">VS</span> RUNTIME VELOCITY</p>
+    </div>
+    <div class="header-right">
+      <div class="architect-badge">
+        <span class="arch-label">PORTFOLIO SHOWCASE</span>
+        <span class="arch-name">SIJAZ AHMED</span>
+        <span class="arch-title">Senior AI/ML Architect & Full Stack Lead</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Battle Arena -->
+  <main class="battle-container">
+    <!-- Top HUD Bar -->
+    <div class="hud-top-bar">
+      <div class="faction static-faction">
+        <div class="faction-header">
+          <span class="faction-icon">🛡️</span>
+          <span class="faction-title">THE STATIC CITADEL</span>
+          <span class="faction-badge">0 RUNTIME EXCEPTIONS</span>
+        </div>
+        <div class="power-gauge">
+          <div class="gauge-fill static-fill" id="staticGauge" style="width: 82%;"></div>
+        </div>
+        <div class="roster-icons">
+          <span class="hero-chip active" title="Rust - Borrow Checker Paladin">🦀 Rust</span>
+          <span class="hero-chip active" title="Go - Goroutine Commander">⚡ Go</span>
+          <span class="hero-chip active" title="C++ - Pointer Dreadnought">⚔️ C++</span>
+          <span class="hero-chip active" title="TypeScript - Strict Ronin">🔷 TS</span>
+          <span class="hero-chip active" title="Java - Enterprise Titan">☕ Java</span>
+        </div>
+      </div>
+
+      <div class="act-tracker" id="actTracker">
+        <div class="act-pill active" data-act="1">
+          <span class="act-num">ACT I</span>
+          <span class="act-name">Mobilization</span>
+        </div>
+        <div class="act-pill" data-act="2">
+          <span class="act-num">ACT II</span>
+          <span class="act-name">Skirmish</span>
+        </div>
+        <div class="act-pill" data-act="3">
+          <span class="act-num">ACT III</span>
+          <span class="act-name">Super Moves</span>
+        </div>
+        <div class="act-pill" data-act="4">
+          <span class="act-num">ACT IV</span>
+          <span class="act-name">Architect Nexus</span>
+        </div>
+      </div>
+
+      <div class="faction dynamic-faction">
+        <div class="faction-header">
+          <span class="faction-badge">TURBO EVELOCITY</span>
+          <span class="faction-title">THE DYNAMIC SWARM</span>
+          <span class="faction-icon">🔥</span>
+        </div>
+        <div class="power-gauge">
+          <div class="gauge-fill dynamic-fill" id="dynamicGauge" style="width: 85%;"></div>
+        </div>
+        <div class="roster-icons">
+          <span class="hero-chip active" title="Python - Serpent Archmage">🐍 Python</span>
+          <span class="hero-chip active" title="JavaScript - Event Loop Jester">⚡ JS</span>
+          <span class="hero-chip active" title="Ruby - Metaprogramming Rogue">💎 Ruby</span>
+          <span class="hero-chip active" title="PHP - ElePHPant Juggernaut">🐘 PHP</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Canvas Wrapper -->
+    <div class="canvas-wrapper" id="canvasWrapper">
+      <canvas id="battleCanvas"></canvas>
+      
+      <!-- Live Floating Terminal Combat Feed -->
+      <div class="combat-feed-panel" id="combatFeedPanel">
+        <div class="feed-header">
+          <span class="term-dots"><i></i><i></i><i></i></span>
+          <span class="term-title">RUNTIME COMBAT LOG [STDOUT]</span>
+          <button class="minimize-feed-btn" id="toggleFeedBtn" title="Toggle Log">_</button>
+        </div>
+        <div class="feed-body" id="feedBody">
+          <div class="feed-row log-sys">[00:00:01] System initialised: Allocating memory arenas & spawning virtual event loop...</div>
+          <div class="feed-row log-static">[00:00:02] Rust checks memory bounds: 0 vulnerabilities found across &mut world!</div>
+          <div class="feed-row log-dynamic">[00:00:03] JavaScript dynamically coerced [object Object] + 42 = "[object Object]42"</div>
+        </div>
+      </div>
+
+      <!-- Synthesis Banner Overlay (Shown during Act 4) -->
+      <div class="nexus-overlay" id="nexusOverlay">
+        <div class="nexus-card">
+          <div class="nexus-sub">ENTERPRISE ARCHITECTURE HARMONY</div>
+          <h2 class="nexus-title">THE ARCHITECT'S SYNTHESIS</h2>
+          <p class="nexus-desc">
+            Why wage the type war when you can orchestrate both? 
+            In <strong>Sijaz Ahmed's</strong> enterprise architectures, <strong>Python</strong> trains cutting-edge AI models, 
+            <strong>TypeScript</strong> powers reactive interfaces, and <strong>Rust/C++/Go</strong> execute microsecond streaming inference!
+          </p>
+          <div class="nexus-stats">
+            <div class="n-stat"><span class="val">2B+</span><span class="lbl">Daily Inferences</span></div>
+            <div class="n-stat"><span class="val">&lt; 30ms</span><span class="lbl">p99 Latency</span></div>
+            <div class="n-stat"><span class="val">99.97%</span><span class="lbl">Production SLA</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Cinematic Controls Bar -->
+    <div class="controls-bar">
+      <div class="control-group playback-group">
+        <button class="ctrl-btn main-play-btn" id="playPauseBtn" title="Play/Pause Animation">
+          <span class="btn-icon">⏸</span>
+          <span class="btn-text">PAUSE</span>
+        </button>
+        <button class="ctrl-btn" id="restartBtn" title="Restart Battle from Act 1">
+          <span class="btn-icon">↺</span>
+          <span class="btn-text">RESTART</span>
+        </button>
+      </div>
+
+      <div class="control-group speed-group">
+        <span class="ctrl-label">SPEED:</span>
+        <button class="speed-btn" data-speed="0.5">0.5x (Slow-Mo)</button>
+        <button class="speed-btn active" data-speed="1.0">1.0x (Normal)</button>
+        <button class="speed-btn" data-speed="2.0">2.0x (Hyper)</button>
+      </div>
+
+      <div class="control-group triggers-group">
+        <span class="ctrl-label">SUPER MOVES:</span>
+        <button class="super-btn static-btn" id="btnTriggerSegfault" title="Trigger C++ Segmentation Fault!">
+          <span>💥 C++ Segfault</span>
+        </button>
+        <button class="super-btn dynamic-btn" id="btnTriggerLightning" title="Trigger Python PyTorch Tensor Lightning!">
+          <span>🐍 Tensor Bolt</span>
+        </button>
+        <button class="super-btn dynamic-btn" id="btnTriggerMeteor" title="Trigger JS node_modules Meteor!">
+          <span>📦 npm Meteor</span>
+        </button>
+        <button class="super-btn static-btn" id="btnTriggerShield" title="Trigger Rust Borrow Checker Shield!">
+          <span>🦀 Lifetime Shield</span>
+        </button>
+        <button class="super-btn nexus-btn" id="btnTriggerSynthesis" title="Trigger Sijaz Ahmed's Architect Synthesis!">
+          <span>🏛️ Synthesis</span>
+        </button>
+      </div>
+
+      <div class="control-group settings-group">
+        <button class="ctrl-btn audio-btn" id="audioToggleBtn" title="Toggle Synthesized Web Audio FX">
+          <span class="btn-icon" id="audioIcon">🔇</span>
+          <span class="btn-text" id="audioText">SOUND FX</span>
+        </button>
+        <button class="ctrl-btn" id="fullscreenBtn" title="Full Screen View">
+          <span class="btn-icon">⛶</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Architect Philosophy & Architecture Card -->
+    <div class="architect-info-panel">
+      <div class="info-card">
+        <div class="info-tag">THE ARCHITECTURAL REALITY</div>
+        <h3>Unified Distributed Engineering</h3>
+        <p>
+          Real-world scale requires neither blind type-dogmatism nor unchecked dynamic fragility. 
+          As demonstrated in <strong>Sijaz Ahmed's</strong> flagship production systems (e.g. <em>Distributed Financial Data Lake</em>, 
+          <em>Real-Time Fintech Fraud Detection API</em>, and <em>Enterprise RAG Knowledge Retrieval</em>), 
+          static and dynamic languages are deployed where their strengths shine brightest.
+        </p>
+      </div>
+      <div class="info-links">
+        <a href="https://github.com/sijazahmed" target="_blank" class="profile-link-btn github">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          GitHub Profile
+        </a>
+        <a href="https://linkedin.com/in/ssijaz" target="_blank" class="profile-link-btn linkedin">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+          LinkedIn
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
