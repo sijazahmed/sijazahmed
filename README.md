@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/sijazahmed/sijazahmed/main/assets/header.svg" width="100%" alt="Sijaz Ahmed - Senior AI/ML Architect & Full Stack Lead" />
+  <img src="https://raw.githubusercontent.com/sijazahmed/sijazahmed/main/assets/header.svg?v=2" width="100%" alt="Sijaz Ahmed - Senior AI/ML Architect & Full Stack Lead" />
 </p>
 
 <p align="center">
