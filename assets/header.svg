@@ -1,107 +1,343 @@
-<svg width="100%" height="240" viewBox="0 0 900 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="100%" height="280" viewBox="0 0 960 280" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <!-- Background Gradient -->
     <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#070B14" />
-      <stop offset="40%" stop-color="#0D1322" />
-      <stop offset="100%" stop-color="#111A30" />
+      <stop offset="0%" stop-color="#050814" />
+      <stop offset="35%" stop-color="#0a1024" />
+      <stop offset="70%" stop-color="#0e152e" />
+      <stop offset="100%" stop-color="#050814" />
     </linearGradient>
 
-    <!-- Glowing accents -->
-    <radialGradient id="cyanGlow" cx="20%" cy="30%" r="50%">
-      <stop offset="0%" stop-color="#00F0FF" stop-opacity="0.25" />
+    <!-- Side Ambient Glows -->
+    <radialGradient id="staticLeftGlow" cx="10%" cy="50%" r="55%">
+      <stop offset="0%" stop-color="#00F0FF" stop-opacity="0.22" />
       <stop offset="100%" stop-color="#00F0FF" stop-opacity="0" />
     </radialGradient>
-    <radialGradient id="violetGlow" cx="80%" cy="25%" r="60%">
-      <stop offset="0%" stop-color="#8A2BE2" stop-opacity="0.28" />
+
+    <radialGradient id="dynamicRightGlow" cx="90%" cy="50%" r="55%">
+      <stop offset="0%" stop-color="#F59E0B" stop-opacity="0.22" />
+      <stop offset="100%" stop-color="#F59E0B" stop-opacity="0" />
+    </radialGradient>
+
+    <radialGradient id="centerNexusGlow" cx="50%" cy="50%" r="45%">
+      <stop offset="0%" stop-color="#8A2BE2" stop-opacity="0.30" />
+      <stop offset="50%" stop-color="#00F0FF" stop-opacity="0.10" />
       <stop offset="100%" stop-color="#8A2BE2" stop-opacity="0" />
     </radialGradient>
-    <radialGradient id="indigoGlow" cx="50%" cy="85%" r="50%">
-      <stop offset="0%" stop-color="#4F46E5" stop-opacity="0.20" />
-      <stop offset="100%" stop-color="#4F46E5" stop-opacity="0" />
-    </radialGradient>
 
-    <!-- Top Border Gradient -->
+    <!-- Border Gradient -->
     <linearGradient id="topBorder" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#00F0FF" />
-      <stop offset="50%" stop-color="#8A2BE2" />
-      <stop offset="100%" stop-color="#00FF88" />
+      <stop offset="30%" stop-color="#38BDF8" />
+      <stop offset="50%" stop-color="#C084FC" />
+      <stop offset="70%" stop-color="#F59E0B" />
+      <stop offset="100%" stop-color="#10B981" />
     </linearGradient>
 
-    <!-- Text Gradient -->
-    <linearGradient id="textGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+    <!-- Name Shimmer Text Gradient -->
+    <linearGradient id="shimmerGradient" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#FFFFFF" />
-      <stop offset="50%" stop-color="#E0E7FF" />
-      <stop offset="100%" stop-color="#00F0FF" />
+      <stop offset="25%" stop-color="#E0E7FF" />
+      <stop offset="50%" stop-color="#00F0FF" />
+      <stop offset="75%" stop-color="#E0E7FF" />
+      <stop offset="100%" stop-color="#FFFFFF" />
     </linearGradient>
 
-    <!-- Pill Gradient -->
-    <linearGradient id="pillGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#00F0FF" stop-opacity="0.15" />
-      <stop offset="100%" stop-color="#8A2BE2" stop-opacity="0.15" />
+    <!-- Stream Beam Gradients -->
+    <linearGradient id="staticStream" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00F0FF" stop-opacity="0.05" />
+      <stop offset="50%" stop-color="#00F0FF" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#C084FC" stop-opacity="1" />
     </linearGradient>
 
-    <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
-      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#FFFFFF" stroke-opacity="0.03" stroke-width="1" />
-      <circle cx="0" cy="0" r="1" fill="#00F0FF" fill-opacity="0.15" />
+    <linearGradient id="dynamicStream" x1="100%" y1="0%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#F59E0B" stop-opacity="0.05" />
+      <stop offset="50%" stop-color="#10B981" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#C084FC" stop-opacity="1" />
+    </linearGradient>
+
+    <!-- Grid Pattern -->
+    <pattern id="grid" width="28" height="28" patternUnits="userSpaceOnUse">
+      <path d="M 28 0 L 0 0 0 28" fill="none" stroke="#FFFFFF" stroke-opacity="0.035" stroke-width="1" />
+      <circle cx="14" cy="14" r="0.75" fill="#00F0FF" fill-opacity="0.12" />
     </pattern>
+
+    <!-- Glow Filter -->
+    <filter id="neonGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="intenseGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="5" result="blur1" />
+      <feGaussianBlur stdDeviation="2" result="blur2" />
+      <feMerge>
+        <feMergeNode in="blur1" />
+        <feMergeNode in="blur2" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
   </defs>
 
   <style>
+    /* CSS Animations for GitHub Compatibility */
+    @keyframes streamDashLeft {
+      0% { stroke-dashoffset: 200; }
+      100% { stroke-dashoffset: 0; }
+    }
+    @keyframes streamDashRight {
+      0% { stroke-dashoffset: -200; }
+      100% { stroke-dashoffset: 0; }
+    }
+    @keyframes pulseOrb {
+      0%, 100% { transform: scale(1); opacity: 0.7; }
+      50% { transform: scale(1.15); opacity: 1; }
+    }
+    @keyframes floatChip {
+      0%, 100% { opacity: 0.9; }
+      50% { opacity: 1; filter: drop-shadow(0 0 6px rgba(0, 240, 255, 0.6)); }
+    }
+    @keyframes floatChipDyn {
+      0%, 100% { opacity: 0.9; }
+      50% { opacity: 1; filter: drop-shadow(0 0 6px rgba(245, 158, 11, 0.6)); }
+    }
+    @keyframes fadeCode {
+      0%, 100% { opacity: 0.2; }
+      50% { opacity: 0.7; }
+    }
+    @keyframes nexusRotate {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    .stream-left {
+      stroke-dasharray: 12 8;
+      animation: streamDashLeft 4s linear infinite;
+    }
+    .stream-right {
+      stroke-dasharray: 12 8;
+      animation: streamDashRight 4s linear infinite;
+    }
+    .stream-fast-left {
+      stroke-dasharray: 6 14;
+      animation: streamDashLeft 2s linear infinite;
+    }
+    .stream-fast-right {
+      stroke-dasharray: 6 14;
+      animation: streamDashRight 2s linear infinite;
+    }
+    .nexus-ring {
+      animation: pulseOrb 3s ease-in-out infinite;
+      transform-origin: 480px 140px;
+    }
+    .static-chip { animation: floatChip 3s ease-in-out infinite; }
+    .dynamic-chip { animation: floatChipDyn 3s ease-in-out infinite; }
+    .code-tag-1 { animation: fadeCode 3s ease-in-out infinite; }
+    .code-tag-2 { animation: fadeCode 3.6s ease-in-out infinite 1s; }
+    .code-tag-3 { animation: fadeCode 4s ease-in-out infinite 0.5s; }
+    .code-tag-4 { animation: fadeCode 3.2s ease-in-out infinite 1.5s; }
+
     .name-title {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-      font-weight: 800;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 900;
       font-size: 52px;
       letter-spacing: 5px;
-      fill: url(#textGradient);
+      fill: url(#shimmerGradient);
     }
     .role-badge {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-      font-weight: 600;
-      font-size: 15px;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 700;
+      font-size: 13px;
       letter-spacing: 2.5px;
       fill: #00F0FF;
     }
     .tech-pill {
-      font-family: 'Fira Code', 'SF Mono', Consolas, Menlo, Monaco, monospace;
-      font-size: 12px;
+      font-family: 'Fira Code', Consolas, Monaco, monospace;
+      font-size: 11px;
       font-weight: 500;
+      letter-spacing: 1px;
       fill: #94A3B8;
+    }
+    .faction-label {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 800;
+      font-size: 11px;
+      letter-spacing: 2px;
+    }
+    .chip-text {
+      font-family: 'Fira Code', Consolas, Monaco, monospace;
+      font-size: 10px;
+      font-weight: 600;
     }
   </style>
 
-  <!-- Base background -->
-  <rect width="100%" height="100%" rx="16" fill="url(#bgGradient)" />
-  <rect width="100%" height="100%" rx="16" fill="url(#grid)" />
+  <!-- Background Layer -->
+  <rect width="960" height="280" rx="16" fill="url(#bgGradient)" />
+  <rect width="960" height="280" rx="16" fill="url(#grid)" />
+  <rect width="960" height="280" rx="16" fill="url(#staticLeftGlow)" />
+  <rect width="960" height="280" rx="16" fill="url(#dynamicRightGlow)" />
+  <rect width="960" height="280" rx="16" fill="url(#centerNexusGlow)" />
 
-  <!-- Ambient Light Orbs -->
-  <circle cx="180" cy="70" r="160" fill="url(#cyanGlow)" />
-  <circle cx="720" cy="60" r="180" fill="url(#violetGlow)" />
-  <circle cx="450" cy="200" r="150" fill="url(#indigoGlow)" />
+  <!-- Top Accent Cyber Bar -->
+  <rect x="0" y="0" width="960" height="3" fill="url(#topBorder)" />
 
-  <!-- Top illuminated border bar -->
-  <rect x="0" y="0" width="100%" height="3" fill="url(#topBorder)" />
-
-  <!-- Decorative Circuit lines -->
-  <path d="M 40 40 L 120 40 L 140 60" stroke="#00F0FF" stroke-opacity="0.2" stroke-width="1.5" fill="none" />
-  <circle cx="140" cy="60" r="3" fill="#00F0FF" fill-opacity="0.6" />
-
-  <path d="M 860 40 L 780 40 L 760 60" stroke="#8A2BE2" stroke-opacity="0.2" stroke-width="1.5" fill="none" />
-  <circle cx="760" cy="60" r="3" fill="#8A2BE2" fill-opacity="0.6" />
-
-  <!-- Center Content -->
-  <g transform="translate(450, 85)" text-anchor="middle">
-    <!-- Subtitle Tag -->
-    <rect x="-260" y="-45" width="520" height="28" rx="14" fill="url(#pillGrad)" stroke="#00F0FF" stroke-opacity="0.3" stroke-width="1" />
-    <text x="0" y="-27" class="role-badge">SENIOR AI/ML ARCHITECT • FULL STACK LEAD</text>
-
-    <!-- Main Name Title -->
-    <text x="0" y="32" class="name-title">SIJAZ AHMED</text>
-
-    <!-- Secondary Tagline -->
-    <text x="0" y="65" class="tech-pill">ENTERPRISE LLMs &amp; RAG  •  REAL-TIME EVENT STREAMING  •  MULTI-CLOUD (AWS / GCP / AZURE)</text>
+  <!-- ================= LEFT WING: THE STATIC CITADEL ================= -->
+  <!-- Faction Header Pill -->
+  <g transform="translate(115, 38)">
+    <rect x="-85" y="-12" width="170" height="24" rx="12" fill="rgba(0, 240, 255, 0.08)" stroke="#00F0FF" stroke-opacity="0.4" stroke-width="1" />
+    <circle cx="-68" cy="0" r="3" fill="#00F0FF" filter="url(#neonGlow)" />
+    <text x="0" y="4" fill="#00F0FF" text-anchor="middle" class="faction-label">STATIC CITADEL</text>
   </g>
 
-  <!-- Bottom Accent Line -->
-  <line x1="150" y1="205" x2="750" y2="205" stroke="#334155" stroke-opacity="0.4" stroke-width="1" stroke-dasharray="6 6" />
+  <!-- Language Nodes: Static Army -->
+  <!-- 1. Rust -->
+  <g class="static-chip" transform="translate(60, 95)">
+    <rect x="-42" y="-14" width="84" height="28" rx="6" fill="#0a1224" stroke="#00F0FF" stroke-width="1.2" />
+    <text x="-26" y="4" font-size="11">🦀</text>
+    <text x="5" y="4" fill="#E2E8F0" class="chip-text">Rust</text>
+    <circle cx="32" cy="0" r="2.5" fill="#00F0FF" filter="url(#neonGlow)">
+      <animate attributeName="opacity" values="0.4;1;0.4" dur="2s" repeatCount="indefinite" />
+    </circle>
+  </g>
+
+  <!-- 2. C++ -->
+  <g class="static-chip" transform="translate(170, 95)">
+    <rect x="-42" y="-14" width="84" height="28" rx="6" fill="#0a1224" stroke="#38BDF8" stroke-width="1.2" />
+    <text x="-26" y="4" font-size="11">⚔️</text>
+    <text x="5" y="4" fill="#E2E8F0" class="chip-text">C++20</text>
+    <circle cx="32" cy="0" r="2.5" fill="#38BDF8" filter="url(#neonGlow)">
+      <animate attributeName="opacity" values="0.4;1;0.4" dur="2.4s" repeatCount="indefinite" />
+    </circle>
+  </g>
+
+  <!-- 3. Go -->
+  <g class="static-chip" transform="translate(60, 155)">
+    <rect x="-42" y="-14" width="84" height="28" rx="6" fill="#0a1224" stroke="#22D3EE" stroke-width="1.2" />
+    <text x="-26" y="4" font-size="11">⚡</text>
+    <text x="5" y="4" fill="#E2E8F0" class="chip-text">Go</text>
+    <circle cx="32" cy="0" r="2.5" fill="#22D3EE" filter="url(#neonGlow)">
+      <animate attributeName="opacity" values="0.4;1;0.4" dur="1.8s" repeatCount="indefinite" />
+    </circle>
+  </g>
+
+  <!-- 4. TypeScript -->
+  <g class="static-chip" transform="translate(170, 155)">
+    <rect x="-42" y="-14" width="84" height="28" rx="6" fill="#0a1224" stroke="#60A5FA" stroke-width="1.2" />
+    <text x="-26" y="4" font-size="11">🔷</text>
+    <text x="5" y="4" fill="#E2E8F0" class="chip-text">TS</text>
+    <circle cx="32" cy="0" r="2.5" fill="#60A5FA" filter="url(#neonGlow)">
+      <animate attributeName="opacity" values="0.4;1;0.4" dur="2.2s" repeatCount="indefinite" />
+    </circle>
+  </g>
+
+  <!-- Ambient Static Code Badges -->
+  <text x="60" y="215" fill="#00F0FF" class="chip-text code-tag-1">&amp;mut lifetime</text>
+  <text x="160" y="215" fill="#38BDF8" class="chip-text code-tag-2">0x7FFE00 &lt;ptr&gt;</text>
+  <text x="75" y="242" fill="#64748B" class="chip-text code-tag-3">0 RUNTIME PANICS</text>
+
+  <!-- Stream Energy Cables connecting Static Nodes toward Center -->
+  <path d="M 215 95 C 270 95, 290 125, 350 125" fill="none" stroke="url(#staticStream)" stroke-width="2" class="stream-left" />
+  <path d="M 215 155 C 270 155, 290 145, 350 145" fill="none" stroke="url(#staticStream)" stroke-width="2" class="stream-fast-left" />
+
+  <!-- ================= RIGHT WING: THE DYNAMIC SWARM ================= -->
+  <!-- Faction Header Pill -->
+  <g transform="translate(845, 38)">
+    <rect x="-85" y="-12" width="170" height="24" rx="12" fill="rgba(245, 158, 11, 0.08)" stroke="#F59E0B" stroke-opacity="0.4" stroke-width="1" />
+    <circle cx="68" cy="0" r="3" fill="#F59E0B" filter="url(#neonGlow)" />
+    <text x="0" y="4" fill="#F59E0B" text-anchor="middle" class="faction-label">DYNAMIC SWARM</text>
+  </g>
+
+  <!-- Language Nodes: Dynamic Army -->
+  <!-- 1. Python -->
+  <g class="dynamic-chip" transform="translate(790, 95)">
+    <rect x="-42" y="-14" width="84" height="28" rx="6" fill="#141006" stroke="#10B981" stroke-width="1.2" />
+    <text x="-26" y="4" font-size="11">🐍</text>
+    <text x="5" y="4" fill="#E2E8F0" class="chip-text">Python</text>
+    <circle cx="-32" cy="0" r="2.5" fill="#10B981" filter="url(#neonGlow)">
+      <animate attributeName="opacity" values="0.4;1;0.4" dur="2s" repeatCount="indefinite" />
+    </circle>
+  </g>
+
+  <!-- 2. JavaScript -->
+  <g class="dynamic-chip" transform="translate(900, 95)">
+    <rect x="-42" y="-14" width="84" height="28" rx="6" fill="#141006" stroke="#FACC15" stroke-width="1.2" />
+    <text x="-26" y="4" font-size="11">⚡</text>
+    <text x="5" y="4" fill="#E2E8F0" class="chip-text">JS/ES</text>
+    <circle cx="-32" cy="0" r="2.5" fill="#FACC15" filter="url(#neonGlow)">
+      <animate attributeName="opacity" values="0.4;1;0.4" dur="1.7s" repeatCount="indefinite" />
+    </circle>
+  </g>
+
+  <!-- 3. PyTorch / AI -->
+  <g class="dynamic-chip" transform="translate(790, 155)">
+    <rect x="-42" y="-14" width="84" height="28" rx="6" fill="#141006" stroke="#F43F5E" stroke-width="1.2" />
+    <text x="-26" y="4" font-size="11">🔥</text>
+    <text x="5" y="4" fill="#E2E8F0" class="chip-text">PyTorch</text>
+    <circle cx="-32" cy="0" r="2.5" fill="#F43F5E" filter="url(#neonGlow)">
+      <animate attributeName="opacity" values="0.4;1;0.4" dur="2.1s" repeatCount="indefinite" />
+    </circle>
+  </g>
+
+  <!-- 4. React / Node -->
+  <g class="dynamic-chip" transform="translate(900, 155)">
+    <rect x="-42" y="-14" width="84" height="28" rx="6" fill="#141006" stroke="#F59E0B" stroke-width="1.2" />
+    <text x="-26" y="4" font-size="11">⚛️</text>
+    <text x="5" y="4" fill="#E2E8F0" class="chip-text">React</text>
+    <circle cx="-32" cy="0" r="2.5" fill="#F59E0B" filter="url(#neonGlow)">
+      <animate attributeName="opacity" values="0.4;1;0.4" dur="2.5s" repeatCount="indefinite" />
+    </circle>
+  </g>
+
+  <!-- Ambient Dynamic Code Badges -->
+  <text x="735" y="215" fill="#10B981" class="chip-text code-tag-4">torch.compile()</text>
+  <text x="850" y="215" fill="#F59E0B" class="chip-text code-tag-2">async/await</text>
+  <text x="770" y="242" fill="#64748B" class="chip-text code-tag-1">MAX VELOCITY AI</text>
+
+  <!-- Stream Energy Cables connecting Dynamic Nodes toward Center -->
+  <path d="M 745 95 C 690 95, 670 125, 610 125" fill="none" stroke="url(#dynamicStream)" stroke-width="2" class="stream-right" />
+  <path d="M 745 155 C 690 155, 670 145, 610 145" fill="none" stroke="url(#dynamicStream)" stroke-width="2" class="stream-fast-right" />
+
+  <!-- ================= CENTER: SIJAZ AHMED & ARCHITECT NEXUS ================= -->
+  <!-- Central Nexus Ring / Synthesis Climax -->
+  <g transform="translate(480, 135)">
+    <!-- Outer Synthesis Rings -->
+    <circle cx="0" cy="0" r="75" fill="none" stroke="rgba(192, 132, 252, 0.2)" stroke-width="1" stroke-dasharray="4 4">
+      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="20s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="0" cy="0" r="55" fill="none" stroke="rgba(0, 240, 255, 0.25)" stroke-width="1.5" stroke-dasharray="8 6">
+      <animateTransform attributeName="transform" type="rotate" from="360" to="0" dur="15s" repeatCount="indefinite" />
+    </circle>
+
+    <!-- Pulsing Core Energy Orb -->
+    <circle cx="0" cy="0" r="18" fill="rgba(192, 132, 252, 0.2)" filter="url(#intenseGlow)" class="nexus-ring" />
+    <circle cx="0" cy="0" r="6" fill="#FFFFFF" filter="url(#neonGlow)">
+      <animate attributeName="r" values="4;7;4" dur="2s" repeatCount="indefinite" />
+    </circle>
+  </g>
+
+  <!-- Center Content Info -->
+  <g transform="translate(480, 80)" text-anchor="middle">
+    <!-- Subtitle Role Tag -->
+    <rect x="-220" y="-48" width="440" height="28" rx="14" fill="rgba(0, 240, 255, 0.08)" stroke="rgba(0, 240, 255, 0.35)" stroke-width="1" />
+    <text x="0" y="-30" class="role-badge">SENIOR AI/ML ARCHITECT • FULL STACK LEAD</text>
+
+    <!-- Main Name Title with Metallic Shimmer -->
+    <text x="0" y="32" class="name-title">SIJAZ AHMED</text>
+
+    <!-- Secondary Production Specialization -->
+    <text x="0" y="65" class="tech-pill">ENTERPRISE LLMs &amp; RAG  •  REAL-TIME STREAMING  •  MULTI-CLOUD (AWS/GCP/AZURE)</text>
+  </g>
+
+  <!-- Bottom Synthesis Banner / Harmonizing Both Armies -->
+  <g transform="translate(480, 236)">
+    <rect x="-270" y="-15" width="540" height="30" rx="8" fill="#0c1226" stroke="rgba(192, 132, 252, 0.45)" stroke-width="1.2" />
+    <text x="0" y="5" text-anchor="middle" font-family="'Fira Code', Consolas, monospace" font-size="10.5" font-weight="600">
+      <tspan fill="#00F0FF">STATIC EFFICIENCY</tspan>
+      <tspan fill="#C084FC">  ⚡ SYNTHESIZED BY ARCHITECT ⚡  </tspan>
+      <tspan fill="#F59E0B">DYNAMIC AI AGILITY</tspan>
+    </text>
+  </g>
 </svg>

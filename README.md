@@ -14,10 +14,6 @@
   <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&duration=3000&pause=1000&color=00F0FF&center=true&vCenter=true&multiline=true&width=860&height=80&lines=Enterprise+AI%2FML+Architectures+%7C+LLM+Orchestration+%26+Grounded+RAG;High-Throughput+Streaming+Pipelines+%7C+Kafka+%2B+Spark+%2B+Feast;Full+Stack+AI-Augmented+Web+Platforms+%7C+React+%2B+FastAPI+%2B+Node;Multi-Cloud+Solutions+Architect+(AWS+%7C+GCP+%7C+Azure+%7C+Kubernetes)" alt="Typing SVG" />
 </p>
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/sijazahmed/sijazahmed/main/assets/type_war_banner.svg" width="100%" alt="The Great Type War: Static Citadel vs Dynamic Swarm Animation" />
-</p>
-
 ---
 
 ## 🧭 Table of Contents
